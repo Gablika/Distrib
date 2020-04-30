@@ -1,6 +1,6 @@
-### Distrib.
+### Distrib
 
-Plugin for IDE - IntelliJ IDEA by JetBrains.
+Plugin for IDE - IntelliJ IDEA by JetBrains
 
 Developed at the Faculty of Informatics and Information Technology of the Slovak University of Technology as part of a master thesis project.
 
