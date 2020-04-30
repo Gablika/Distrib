@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.4.11'
+}
+
+group 'java.dtbapp'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://m2proxy.atlassian.com/repository/public"
+    }
+    maven {
+        url "https://mvnrepository.com/artifact"
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'org.spockframework:spock-core:1.2-groovy-2.5'
+    testCompile 'org.codehaus.groovy:groovy:2.5.7'
+    testCompile 'org.codehaus.groovy:groovy-json:2.5.7'
+    testCompile 'org.codehaus.groovy:groovy-macro:2.5.7'
+    testCompile 'org.codehaus.groovy:groovy-nio:2.5.7'
+    testCompile 'org.codehaus.groovy:groovy-sql:2.5.7' 
+    testCompile 'org.codehaus.groovy:groovy-templates:2.5.7'
+    testCompile 'org.codehaus.groovy:groovy-test:2.5.7'
+    testCompile 'org.codehaus.groovy:groovy-xml:2.5.7'
+    runtime "org.slf4j:slf4j-log4j12:1.7.2"
+    compile group: 'org.openjfx', name: 'javafx-controls', version: '11'
+    compile group: 'com.atlassian.fugue', name: 'fugue', version: '2.6.1'
+    compile group: 'com.atlassian.jira', name: 'jira-rest-java-client-core', version: '5.2.0'
+    compile group: 'com.atlassian.jira', name: 'jira-rest-java-client-api', version: '4.0.0'
+    compile group: 'org.json', name: 'json', version: '20190722'
+    compile group: 'com.ullink.slack', name: 'simpleslackapi', version: '1.2.0'
+    compile group: 'io.atlassian.fugue', name: 'fugue', version: '4.7.2'
+    implementation 'com.sun.xml.ws:jaxws-ri:2.3.2'
+    implementation 'com.sun.xml.bind:jaxb-impl:2.4.0-b180830.0438'
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version '2019.2.3'
+}
+patchPluginXml {
+    changeNotes """
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>"""
+}

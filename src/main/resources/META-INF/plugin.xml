@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>java.dtb.distrib</id>
+    <name>dtbapp</name>
+    <vendor email="" url="">Distrib</vendor>
+
+    <description>Distrib App - allows distributed teams to colaborate</description>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceInterface="persistantStorage.DistribSettingsConfigurableConfig" serviceImplementation="persistantStorage.DistribSettingsConfigurableConfig"/>
+        <applicationService serviceInterface="persistantStorage.DistribProfileMaker" serviceImplementation="persistantStorage.DistribProfileMaker"/>
+        <applicationConfigurable groupId="tools" displayName="Distrib Plugin Settings" id="preferences.DistribSettingsConfigurable" instance="distribSettings.DistribSettingsConfigurable"/>
+    </extensions>
+
+    <actions>
+        <group id="DistribPlugin.MainMenu" text="Distrib" description="Distrib menu">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="DistribPlugin.StartStop" class="StartAction" text="Start" description="Start Distrib App"/>
+            <action id="DistribPlugin.Settings" class="SettingsAction" text="Settings" description="Settings for Distrib App API to Jira and Slack"/>
+            <action id="DistribPlugin.ClearProfile" class="ClearProfileAction" text="Clear profile" description="Clear local profile storage"/>
+        </group>
+    </actions>
+</idea-plugin>
