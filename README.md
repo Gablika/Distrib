@@ -1,4 +1,4 @@
-### Distrib
+###### Distrib
 
 Plugin for IDE - IntelliJ IDEA by JetBrains
 
